@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Dropzone from "./Dropzone";
 import "./Upload.css";
 import Progress from "./Progress";
+import Showpdf from "./Showpdf";
 
 class Upload extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class Upload extends Component {
       files: [],
       uploading: false,
       uploadProgress: {},
-      successfullUploaded: false
+      successfullUploaded: false,
     };
 
     this.onFilesAdded = this.onFilesAdded.bind(this);
@@ -101,13 +102,22 @@ class Upload extends Component {
   renderActions() {
     if (this.state.successfullUploaded) {
       return (
+        <div>
+          <button
+            onClick={() =>
+              this.setState({ files: [], successfullUploaded: false } )
+            } 
+          >
+            Clear
+          </button>
+
         <button
-          onClick={() =>
-            this.setState({ files: [], successfullUploaded: false })
-          }
+          onClick={this.props.changePage} 
         >
-          Clear
+          Show PDF File
         </button>
+
+      </div>
       );
     } else {
       return (
@@ -121,7 +131,12 @@ class Upload extends Component {
     }
   }
 
+  
+
   render() {
+
+    let display = ( <Upload />)
+
     return (
       <div className="Upload">
         <span className="Title">Upload Files</span>

@@ -73,6 +73,7 @@ button {
   height: 36px;
   min-width: 88px;
   padding: 6px 16px;
+  margin-left: 12px;
   line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
