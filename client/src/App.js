@@ -1,6 +1,7 @@
 import React from 'react';
 import FileUpload from './components/FileUpload';
 import './App.css';
+import Showpdf from './components/Showpdf';
 
 const App = () => (
   <div className='container mt-4'>
@@ -8,7 +9,7 @@ const App = () => (
       <i className='fab fa-react' /> React File Upload
     </h4>
 
-    <FileUpload />
+    <Showpdf/>
   </div>
 );
 
