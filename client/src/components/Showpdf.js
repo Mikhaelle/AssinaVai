@@ -4,6 +4,7 @@ import { Document, Page } from 'react-pdf';
 import Message from './Message';
 import Progress from './Progress';
 import axios from 'axios';
+import Signature from './Signature';
 
 class Showpdf extends React.Component {
   state = {
@@ -100,6 +101,7 @@ class Showpdf extends React.Component {
           </Grid.Column>
         </Grid>   
 </div> 
+<Signature></Signature>
 </div>
       )
     }
