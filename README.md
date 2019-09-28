@@ -9,7 +9,9 @@ O teste consiste em:
 - Deve existir alguma forma do usuário fazer download do documento.
 
 Foram utilizadas as seguintes bibliotecas externas:
+
 Para exibição do pdf é utilizado [React-pdf](https://www.npmjs.com/package/react-pdf)
+
 Para fazer a assinatura é utilizado  [react-signature-canvas](https://www.npmjs.com/package/react-signature-canvas)
 
       
@@ -19,7 +21,7 @@ Para fazer a assinatura é utilizado  [react-signature-canvas](https://www.npmjs
 
       npm install
 
-- Volte para a pasta Assinavai e utilzie
+- Volte para a pasta Assinavai e utilize
 
-            npm install
-            npm run dev
+      npm install
+      npm run dev
