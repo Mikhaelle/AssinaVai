@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Header, Grid, Form } from 'semantic-ui-react';
-import { Document, Page } from 'react-pdf';
+import { Document, Page, View } from 'react-pdf';
 import Message from './Message';
 import Progress from './Progress';
 import axios from 'axios';
@@ -63,6 +63,7 @@ class Showpdf extends React.Component {
   onDocumentLoadSuccess = ({ numPages }) => {
     this.setState({ numPages });
   }
+  
 
   nextPage = () => {
     const currentPageNumber = this.state.pageNumber;
@@ -86,23 +87,26 @@ class Showpdf extends React.Component {
 
     let up = false
     if(this.state.uploadedFile){
-      up = ( <div>
+      up = ( 
+      <div>
         <h4 className='display-4 text-center mb-1'>
-      PDF Preview
-  </h4>
-<div className='row mt-5 '>
+        PDF Preview
+        </h4>
+
+      <div className='row mt-5 '>
          <Grid centered columns={2}>
           <Grid.Column textAlign="center" onClick={this.nextPage}>
             <Document file={this.state.file} 
                       onLoadSuccess={this.onDocumentLoadSuccess} >
-              <Page pageNumber={this.state.pageNumber} />
+              <Page pageNumber={this.state.pageNumber}>
+             </Page>
             </Document>
             {this.state.file ? <p>Page {this.state.pageNumber} of {this.state.numPages}</p> : null}
           </Grid.Column>
         </Grid>   
-</div> 
-<Signature></Signature>
-</div>
+      </div> 
+      <Signature file = {this.state.file}></Signature>
+      </div>
       )
     }
 

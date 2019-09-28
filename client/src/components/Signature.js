@@ -4,8 +4,10 @@ import SignaturePad from './Signatureprops.js'
 
 import styles from './signature.css'
 
+import * as jsPDF from 'jspdf'
+
 class Signature extends Component {
-  state = { trimmedDataURL: null }
+  state = { trimmedDataURL: null , file2 :null}
 
   sigPad = {}
 
@@ -14,11 +16,19 @@ class Signature extends Component {
   }
 
   trim = () => {
+    
     this.setState({ trimmedDataURL: this.sigPad.getTrimmedCanvas()
       .toDataURL('image/png') })
+      const img2data = this.state.trimmedDataURL;
+      const pdf = new jsPDF();
+    pdf.addImage(img2data,'PNG', 10, 10);
+    pdf.save("download.pdf");  
   }
 
+  
+
   render () {
+
     const { trimmedDataURL } = this.state
     return (
     <div  className="row">
@@ -36,7 +46,7 @@ class Signature extends Component {
         </button>
       </div>
       {trimmedDataURL
-        ? <img className={styles.sigImage}
+        ? <img className="sigImage"
           src={trimmedDataURL} />
         : null}
     </div>
