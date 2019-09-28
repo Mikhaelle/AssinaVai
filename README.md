@@ -8,31 +8,18 @@ O teste consiste em:
 - O PDF assinado pode ser visualizado pelo usuário;
 - Deve existir alguma forma do usuário fazer download do documento.
 
-Para o upload de arquivos foi utilizado como base esse (tutorial)[https://malcoded.com/posts/react-file-upload/]
+Foram utilizadas as seguintes bibliotecas externas:
 Para exibição do pdf é utilizado [React-pdf](https://www.npmjs.com/package/react-pdf)
-Para adição de assinatura é utilizado  [react-signature-canvas](https://www.npmjs.com/package/react-signature-canvas)
+Para fazer a assinatura é utilizado  [react-signature-canvas](https://www.npmjs.com/package/react-signature-canvas)
 
-
-# Instalão de componentes dentro da pasta server
-      
- [Express.js](https://expressjs.com)
- 
-      npm install express
-      
- [CORS](https://auth0.com/blog/cors-tutorial-a-guide-to-cross-origin-resource-sharing/)
- 
-      npm install cors
-
-[Formidable](https://www.npmjs.com/package/formidable)
-
-      npm install formidable
       
 # Rodando a aplicação
-
-- Vá para a pasta server e utilize
-
-      node server.js
       
-- Abra paralelamente a pasta app e utilize
+- Abra paralelamente a pasta client e utilize
 
-      npm start
+      npm install
+
+- Volte para a pasta Assinavai e utilzie
+
+            npm install
+            npm run dev
