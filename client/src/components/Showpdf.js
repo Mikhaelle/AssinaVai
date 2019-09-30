@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Header, Grid, Form } from 'semantic-ui-react';
-import { Document, Page, View } from 'react-pdf';
+import { Container,  Grid } from 'semantic-ui-react';
+import { Document, Page} from 'react-pdf';
 import Message from './Message';
 import Progress from './Progress';
 import axios from 'axios';
@@ -14,7 +14,8 @@ class Showpdf extends React.Component {
     pageNumber: 1,
     uploadPercentage: 0,
     message:null,
-    uploadedFile : false
+    uploadedFile : false,
+    setUploadedFile :({})
   }
 
   onSubmit = async (e) => {
@@ -38,6 +39,10 @@ class Showpdf extends React.Component {
           setTimeout(() => this.setState({uploadPercentage:0}), 10000);
         }
       });
+
+      const { fileName, filePath } = res.data
+
+      this.setState({setUploadedFile:{ fileName, filePath }})
 
       this.setState({uploadedFile:true})
       this.setState({message:'File Uploaded'})
@@ -89,9 +94,9 @@ class Showpdf extends React.Component {
     if(this.state.uploadedFile){
       up = ( 
       <div>
-        <h4 className='display-4 text-center mb-1'>
+        <h1 className='text-center mt-5'>
         PDF Preview
-        </h4>
+        </h1>
 
       <div className='row mt-5 '>
          <Grid centered columns={2}>
@@ -105,12 +110,11 @@ class Showpdf extends React.Component {
           </Grid.Column>
         </Grid>   
       </div> 
-      <Signature file = {this.state.file}></Signature>
+      <Signature setUploadedFile = {this.state.setUploadedFile}></Signature>
       </div>
       )
     }
 
-    const { pageNumber, numPages } = this.state;
     return (
       <Container>
         <br />

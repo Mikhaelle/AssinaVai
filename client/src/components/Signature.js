@@ -28,7 +28,8 @@ class Signature extends Component {
   
 
   render () {
-
+    
+    console.log(this.props.setUploadedFile.filePath)
     const { trimmedDataURL } = this.state
     return (
     <div  className="row">
@@ -39,15 +40,18 @@ class Signature extends Component {
       </div>
       <div className='text-center mt-1'>
         <button className='btn btn-primary center-block ' onClick={this.clear}>
-          Clear
+          Limpar
         </button>
         <button className='btn btn-primary  center-block mt-0' onClick={this.trim}>
-          Upload signature
+          Assinar
         </button>
       </div>
       {trimmedDataURL
-        ? <img className="sigImage"
+        ? 
+          <div>
+          <img className="sigImage"
           src={trimmedDataURL} />
+          </div>
         : null}
     </div>
     </div>
