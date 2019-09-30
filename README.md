@@ -24,7 +24,7 @@ Para fazer a assinatura é utilizado  [react-signature-canvas](https://www.npmjs
 - Volte para a pasta Assinavai e utilize
 
       npm install
-      npm run dev
+      sudo npm run dev
 
 # Passo a passo da aplicação
 
@@ -37,4 +37,4 @@ Para fazer a assinatura é utilizado  [react-signature-canvas](https://www.npmjs
 - Nesse download aparecerá somente a assinatura
 
 # Melhoramentos futuros
-Por razões de tempo não foi possível adicionar a feature de colocar a assinatura nos documentos pdfs, pelo o que foi pesquisado seria possível utilizando a biblioteca do (jspdf)[https://medium.com/@shivekkhurana/how-to-create-pdfs-from-react-components-client-side-solution-7f506d9dfa6d]
+Por razões de tempo não foi possível adicionar a feature de colocar a assinatura nos documentos pdfs, pelo o que foi pesquisado seria possível utilizando a biblioteca do [jspdf](https://medium.com/@shivekkhurana/how-to-create-pdfs-from-react-components-client-side-solution-7f506d9dfa6d)
