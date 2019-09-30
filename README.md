@@ -25,3 +25,16 @@ Para fazer a assinatura é utilizado  [react-signature-canvas](https://www.npmjs
 
       npm install
       npm run dev
+
+# Passo a passo da aplicação
+
+- Faça o upload do documento
+- O pdf aparecerá abaixo do upload
+- O campo de assinatura aparecerá abaixo do pdf
+- Faça a assinatura e clique em upload Assignature
+- Uma imagem da assinatura aparecerá logo abaixo
+- Clique novamente em upload assignature e um dowload será feito
+- Nesse download aparecerá somente a assinatura
+
+# Melhoramentos futuros
+Por razões de tempo não foi possível adicionar a feature de colocar a assinatura nos documentos pdfs, pelo o que foi pesquisado seria possível utilizando a biblioteca do (jspdf)[https://medium.com/@shivekkhurana/how-to-create-pdfs-from-react-components-client-side-solution-7f506d9dfa6d]
