@@ -24,7 +24,7 @@ Para fazer a assinatura é utilizado  [react-signature-canvas](https://www.npmjs
 - Volte para a pasta Assinavai e utilize
 
       npm install
-      npm run dev
+      sudo npm run dev
 
 # Passo a passo da aplicação
 
