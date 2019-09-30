@@ -16,6 +16,8 @@ Para fazer a assinatura é utilizado  [react-signature-canvas](https://www.npmjs
 
       
 # Rodando a aplicação
+
+Você deve tero [nodejs](https://nodejs.org/en/download/) instalado na sua máquina
       
 - Abra paralelamente a pasta client e utilize
 
